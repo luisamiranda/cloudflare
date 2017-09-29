@@ -1,0 +1,285 @@
+/*------------------ RESET ---------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*----------- GENERAL ELEMENT STYLES -----------*/
+html, body {
+  background-color: #bbbbbb;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #222;
+  font-weight: lighter;
+  box-sizing: border-box;
+}
+
+/*--------------- FLEXBOX LAYOUT ---------------*/
+.flex-container {
+  margin: auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fff;
+  min-height: 540px;
+  height: 80%;
+  min-width: 640px;
+  width: 80%;
+}
+
+.center {
+  display: table-cell;
+  flex: 1;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #F9893A;
+  height: 500px;
+  min-width: 200px;
+  margin: auto 10px;
+}
+
+.left {
+  display: table-cell;
+  background-color: #96C958;
+  height: 400px;
+  width: 200px;
+  margin: auto 10px;
+}
+
+.right {
+  display: table-cell;
+  background-color: #267CB9;
+  height: 300px;
+  width: 200px;
+  margin: auto 10px;
+}
+
+a.pagelink {
+  display: block;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/*------------------ COMPONENT STYLES -----------------*/
+h2 {
+  font-size: 1.5em;
+  font-weight: light;
+}
+
+/* LOGIN ELEMENT */
+
+#login {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  display: table-cell;
+  margin: 20px;
+}
+
+input {
+  margin: 10px 0;
+  padding: 5px;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0;
+}
+
+button {
+  position: relative;
+  left: 50%;
+  border: none;
+  border-radius: 3%;
+  background-color: #267CB9;
+  color: #fff;
+  padding: 7px 15px;
+}
+
+button:hover {
+  position: relative;
+  bottom: 2px;
+  right: 2px;
+  box-shadow: 1px 1px #9A9A9A;
+}
+
+button[disabled=true] {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  background-color: #9A9A9A;
+  color: #fff;
+}
+
+/* NAVIGATION ELEMENT */
+
+#appnav {
+  background-color: #fff;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+nav > ul {
+  display: table-cell;
+  flex-grow: 1;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+li {
+  margin: 15px 0;
+}
+
+a:link {
+  color: #267CB9;
+  text-decoration: none;
+  margin: 10px;
+}
+
+a:visited {
+  color: #267CB9;
+}
+
+a:active {
+  color: #267CB9;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* TABLE ELEMENT */
+
+#data-table {
+  background-color: #fff;
+  margin: auto;
+}
+
+table {
+  width: 100%;
+  margin: 10px 0;
+  font-size: 0.8em;
+}
+
+tr:nth-child(even) {
+  background-color: #FAFAFA;
+}
+
+tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+tr:hover {
+  background-color: #eee;
+}
+
+tr.highlight {
+  background-color: #eee;
+}
+
+th {
+  background-color: #E0E0E0;
+  font-weight: bold;
+  padding: 10px 0;
+}
+
+td {
+  vertical-align: middle;
+  padding: 5px;
+}
+
+.cat1 {
+  background-color: #404141;
+  padding: 2px;
+}
+.cat2 {
+  background-color: #267CB9;
+  padding: 2px;
+}
+.cat3 {
+  background-color: #96C958;
+  padding: 2px;
+}
+.cat4 {
+  background-color: #9A9A9A;
+  padding: 2px;
+}
+.cat5 {
+  background-color: #5EA1D1;
+  padding: 2px;
+}
+.cat6 {
+  background-color: #E54F55;
+  padding: 2px;
+}
+
+input[type=checkbox] {
+  margin: 10px;
+}
+/*--------------------- COLORS ------------------*/
+/*
+  red-orange: #E54F55;
+  orange: #F9893A;
+  green: #96C958;
+  blue: #267CB9;
+  light-blue: #5EA1D1;
+  dark-grey: #404141;
+  light-grey: #9A9A9A;
+*/

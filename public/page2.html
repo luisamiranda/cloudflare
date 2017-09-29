@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Luisa's Cloudflare Test</title>
+    <link rel="stylesheet" href="main.css">
+    <script type="text/javascript" src="script.js"></script>
+  </head>
+  <body>
+    <h2>Cloudflare Test: Part 1 - Widgets</h2>
+    <section class="flex-container">
+    <!--Navigation Bar-->
+      <nav class="left" id="appnav">
+        <ul>
+          <li><a href="#" id="1" onclick="appnav.showActive(this.id)">A link ></a></li>
+          <li><a href="#" id="2" onclick="appnav.showActive(this.id)">A link ></a></li>
+          <li><a href="#" id="3" onclick="appnav.showActive(this.id)">A link ></a></li>
+          <li><a href="#" id="4" onclick="appnav.showActive(this.id)">A link ></a></li>
+          <li><a href="#" id="5" onclick="appnav.showActive(this.id)">A link ></a></li>
+          <li><a href="#" id="6" onclick="appnav.showActive(this.id)">A link ></a></li>
+        </ul>
+      </nav>
+      <main
+      class="center"
+      id="data-table"
+      style="overflow-x:auto;">
+      <!--Data Table-->
+        <table>
+          <tr>
+            <th></th>
+            <th></th>
+            <th>Type</th>
+            <th>Name</th>
+            <th>Value</th>
+            <th>TTL</th>
+          </tr>
+          <tr id="row-1"
+          onclick="table.highlightRow(this.id)">
+            <td class="cat1"></td>
+            <td><input type="checkbox" /></td>
+            <td>A</td>
+            <td>mail</td>
+            <td>points to 216.70.64.90</td>
+            <td>15 mins</td>
+          </tr>
+          <tr id="row-2"
+          onclick="table.highlightRow(this.id)">
+            <td class="cat2"></td>
+            <td><input type="checkbox" /></td>
+            <td>MX</td>
+            <td>examplewebsiteone.com</td>
+            <td>mail handled by mail.examplewebsiteone.com</td>
+            <td>12 hours</td>
+          </tr>
+          <tr id="row-3"
+          onclick="table.highlightRow(this.id)">
+            <td class="cat3"></td>
+            <td><input type="checkbox" /></td>
+            <td>TXT</td>
+            <td>lorem ipsum</td>
+            <td>v=spf1 ip4;123.123.123.123 -all</td>
+            <td>Automatic</td>
+          </tr>
+          <tr id="row-4"
+          onclick="table.highlightRow(this.id)">
+            <td class="cat4"></td>
+            <td><input type="checkbox" /></td>
+            <td>AAAA</td>
+            <td>examplewebsiteone.com</td>
+            <td>points to 2001:0db8:85a3:0000:0000:8a2e:...</td>
+            <td>Automatic</td>
+          </tr>
+          <tr id="row-5"
+          onclick="table.highlightRow(this.id)">
+            <td class="cat5"></td>
+            <td><input type="checkbox" /></td>
+            <td>LOC</td>
+            <td>lorem ipsum</td>
+            <td> </td>
+            <td>1 day</td>
+          </tr>
+          <tr id="row-6"
+          onclick="table.highlightRow(this.id)">
+            <td class="cat6"></td>
+            <td><input type="checkbox" /></td>
+            <td>SRV</td>
+            <td>lorem ipsum</td>
+            <td> </td>
+            <td>Automatic</td>
+          </tr>
+        </table>
+      </main>
+      <!--Login Element-->
+      <aside class="right" id="login">
+        <form onsubmit="">
+          <label name="email">Email</label><br/>
+          <input type="text"
+          name="email"
+          id="email"
+          placeholder="sam@example.com" onkeyup="login.validateEmail(this)"
+          autofocus/>
+          <label name="password">Password</label><br>
+          <input type="text"
+          name="password"
+          id="password"
+          placeholder="password1"
+          onkeyup="login.validatePassword(this)"/>
+          <br/>
+          <button type="submit"
+          id="submit"
+          disabled="true">
+          Login
+          </button>
+        </form>
+      </aside>
+    </section>
+    <a target="_blank"href="https://repl.it/LmpI/10" class="pagelink">Part 2 - JavaScript</a>
+  </body>
+</html>

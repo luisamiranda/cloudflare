@@ -1,0 +1,26 @@
+{
+  "name": "cloudflare_test",
+  "version": "1.0.0",
+  "description": "simple html, css, js aptitude demonstration",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm test",
+    "start": "nodemon server.js"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "js"
+  ],
+  "author": "Luisa de Miranda",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.15.5",
+    "morgan": "^1.8.2",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  }
+}
