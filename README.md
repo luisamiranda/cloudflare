@@ -29,10 +29,27 @@ Below are the reponses to your questions about the designs and the code.
   * Aside from the lack of planning for smaller devices and table scrolling mentioned in the previous questions, I think they are nice, simple and legible designs.<br/>
 
 **What browser-specific issues arise from the designs?**
- * The decision to maintain compatibility with IE9 means that flexbox isn't fully supported. <br/>
+ * The decision to maintain compatibility with IE9 means that flexbox, alpha color, et al. isn't fully supported. <br/>
+ 
 **What compromises or changes would you make to facilitate cross-browser implementation?**
- * The decision to maintain compatibility with IE9 means that flexbox isn't fully supported. <br/>
-  
+ * I chose to use flexbox with a simple polyfill, which tells flex-items to act like table-cells, to get around the IE9 incompatibility, but the layout of the page might be more cross-compatible if it were a bit blockier (especially since the background is white and the user won't be able to see that the widgets are floating on custom-sized boxes). That would be simpler to completely replace with a more backwards-compatible table structure. <br/>
 <br/>
   
 **JavaScript Questions**
+
+
+**How can EventEmitter change to support wildcard tokens in the event key ( app.*.log )?**
+* not sure
+
+
+**Can EventEmitter be modified to support a limited number of callbacks for a given event key?**
+* Yes! It would be very easy to limit the number to one by simply have the value of events[event] be a single function that gets replaced every time a new one is set with .on. Otherwise, to set a limit on the length of the array of functions in events[event], when checking for the existence of the array in the .on method, one could simultaneously check the length of the array, for example:
+```  
+if (this.events[event] === undefined) {
+  this.events[event] = [cb];
+} else if (this.events[event] && this.events[event] < X){
+  this.events[event].push(cb);
+} else {
+  return 'Too many functions assigned to that event.'
+}
+```
