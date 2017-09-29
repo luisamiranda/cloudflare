@@ -18,9 +18,11 @@ Below are the reponses to your questions about the designs and the code.
  * Nothing is impossible if you believe in yourself :) <br/>
  
 **As regards to the designs themselves:** <br/>
+
   *Do they provide you with enough information to facilitate implementation?*
   * The designs could definitely use more information from the designer, such as hex codes for colors and specific typefaces.
   * The designs don't specify what should happen when the viewport/device size goes below 640px. It may never be necessary, but usually, I would implement a small size design that stacks components and/or drops some superfluous ones, but there was no mention of it, so I skipped it for now. The design also does not indicate how the table should look at 200px wide, so I gave it an overflow scroll, but I don't think it's very usable.<br/>
+  
   *How would you change them? How might you seek confirmation or feedback?*
    * In a non-challenge setting, I would send this prototype to the designer with specific questions about colors, typefaces, scrolling, and expected small screen use. <br/>
   *Are they good designs? That is, in your opinion, do they contain design errors? If they were to be implemented as is, would they enhance or hinder the user experience?*
