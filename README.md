@@ -15,7 +15,7 @@ Which design details are difficult to implement?<br>
   * There wasn't any particularly difficult one, but I was unable to implement the highlighting of links and table rows or the email and password validation without JavaScript. In general, ensuring cross-browser compatibility is always difficult.<br>
 <br>
 Which design details are impossible to implement?<br>
- * Nothing is impossoble if you believe in yourself :)<br>
+ * Nothing is impossible if you believe in yourself :)<br>
 <br>
 As regards to the designs themselves:<br>
   Do they provide you with enough information to facilitate implementation?
