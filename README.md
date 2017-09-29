@@ -7,14 +7,14 @@ Thank you for this opportunity to audition for your company. To run this app, pl
   * visit http://localhost:5050
   * click the links at the bottom of the pages to advance
   
-Here are the reponses to your questions about the designs and the code.
+Below are the reponses to your questions about the designs and the code.
 
 **HTML & CSS Questions**
 
 Which design details are difficult to implement?<br>
   * There wasn't any particularly difficult one, but I was unable to implement the highlighting of links and table rows or the email and password validation without JavaScript. In general, ensuring cross-browser compatibility is always difficult.<br>
 <br>
-Which design details are impossible to implement?
+Which design details are impossible to implement?<br>
  * Nothing is impossoble if you believe in yourself :)<br>
 <br>
 As regards to the designs themselves:<br>
@@ -33,3 +33,6 @@ What browser-specific issues arise from the designs?
 <br>
 What compromises or changes would you make to facilitate cross-browser implementation?
   * The decision to maintain compatibility with IE9 means that flexbox isn't fully supported. <br>
+  <br>
+  
+**HTML & CSS Questions**
