@@ -39,11 +39,11 @@ Below are the reponses to your questions about the designs and the code.
 
 
 **How can EventEmitter change to support wildcard tokens in the event key ( app.*.log )?**
-* not sure
+* I'm not 100% sure if this is what you're looking for, but I think you could add a conditional that triggers when a wildcard is passed in to loop through all existing events, adding the function passed as the second parameter to all event callback arrays. This would only add the callback to existing events, though, so events added after that wildcard would not receive the callback. A solution to THAT might be to create * as its own event and keep an array of all the callbacks placed that way, and place all the callbacks in the array on to any future events created upon creation, along with the custom callback for that event.  
 
 
 **Can EventEmitter be modified to support a limited number of callbacks for a given event key?**
-* Yes! It would be very easy to limit the number to one by simply have the value of events[event] be a single function that gets replaced every time a new one is set with .on. Otherwise, to set a limit on the length of the array of functions in events[event], when checking for the existence of the array in the .on method, one could simultaneously check the length of the array, for example:
+* Yes! It would be very easy to limit the number to one by simply have the value of events[event] be a single function that gets replaced every time a new one is set with .on. Otherwise, to set a limit on the length of the array of functions in events[event], when checking for the existence of the array in the .on method, you could simultaneously check the length of the array, for example:
 ```  
 if (this.events[event] === undefined) {
   this.events[event] = [cb];
